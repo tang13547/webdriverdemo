@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataDriven>
+    <test>浏览器/url配置</test>
+        <!--需要启动什么浏览器和url，在次配置配置 -->
+        <Browser browser="ie" />
+        <Url url="http://112.24.96.16:8082/cas/login?service=http://112.24.96.16:9203/shiro-cas"/>
+    <loginfail>登陆失败数据</loginfail>
+        <failLogin1 username="" password="" expected="请输入正确的用户名/邮箱/手机"/>
+        <failLogin2 username="admin" password="" expected="请输入密码"/>
+        <failLogin3 username="admin" password="admin" expected="请输入验证码"/>
+    <loginpass>登陆成功数据</loginpass>
+        <islogin username="monkey1" password="monkey1" expected="用户名：monkey1"/>
+
+</DataDriven>
